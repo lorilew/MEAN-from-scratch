@@ -1,0 +1,6 @@
+
+module.exports.getLocationID = function (req,res){
+ var locationID= "LONDON";
+ res.json({"locationID":locationID});
+
+}

@@ -1,0 +1,13 @@
+{
+  "name": "meandemo",
+  "vesion": "0.0.1",
+  "dependencies": {
+    "express": "^4.13.3",
+    "body-parser": "^1.14.0",
+    "mongoose": "^4.1.7",
+    "supertest": "^1.1.0",
+    "nock": "^2.12.0",
+    "should": "^7.1.0",
+    "jasmine-node": "^1.14.5"
+  }
+}

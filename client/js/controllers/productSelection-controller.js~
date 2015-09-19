@@ -1,0 +1,31 @@
+app.controller('productSelection-Controller', ['$scope', '$resource', function($scope, $resource){
+  	
+  $scope.sProducts = [];
+  $scope.nProducts = [];
+  $scope.myProducts = [];
+  
+
+  var Product = $resource('/api/products');
+  Product.query(function(results){
+  	for(result in results){
+  		if(result.category==="Sports"){
+  			$scope.sProducts.push(result);
+  		}
+                if(result.category==="News"){
+  			$scope.nProducts.push(result);
+  		}
+  	}
+  })
+  /*$scope.meetups = [];
+
+  $scope.createMeetup = function(){
+  	var meetup = new Meetup();
+	meetup.name = $scope.meetupName;
+	meetup.$save(function(result){
+		$scope.meetups.push(result);
+	});
+	$scope.meetupName = '';
+  }*/
+}]);
+
+

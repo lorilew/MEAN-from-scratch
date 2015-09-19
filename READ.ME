@@ -1,0 +1,43 @@
+This is a Mongo, Express, AngularJS, NodeJS stack.
+
+
+Prerequisites
+---------------
+DATABASE
+  1. Download and install Mongo 
+      https://www.mongodb.org
+  2. Start Mongo in terminal.
+  3. Seed database with mock user and product data by
+     copy and pasting the commands in server/seed.js 
+     into the terminal.
+
+SERVER
+  1. terminal command: cd sky-test/
+                     :  npm install (install dependancies)
+  2. terminal command: node server.js
+  3. The server should start.
+
+CLIENT
+  1. Open and browser and go to http://localhost:3000/
+  (This was only tested using Chrome)
+
+Tests
+---------------
+
+SERVER
+  To run the tests in the terminal type:
+  mocha server/controllers/catalogue-service.spec.js
+  mocha server/controllers/product-controller.spec.js
+  mocha server/controllers/customerLocation-service.spec.js
+
+CLIENT
+ Its possible to change the customerID in the productsCOntroller 
+ 1: LONDON
+ 2: LIVERPOOL
+ 3: LEEDS
+ Any other customerID is invalid and will return no results.
+
+ CONFIRMATION BUTTON
+ See server console log for result of confirmation page.
+
+ 

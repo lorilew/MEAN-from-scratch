@@ -1,0 +1,22 @@
+'use strict';
+
+app.service('productservice', function ($resource, $http) {
+	
+	var instance = function(){};
+
+        instance.getProducts = function(locationID, cb){
+        	var Product = $resource('/api/products?locationID='+locationID);
+        	Product.query(function(results){
+        		cb(results);
+        	});
+        };
+
+	instance.confirmation = function(customerID, productList, cb){
+		$http.post("/api/catalogue/confirmationPage?customerID="+customerID, {"products":productList})
+    		.success(function(response) {
+    			// redirect to confirmation page
+    		});
+	}
+	
+        return instance;
+});
